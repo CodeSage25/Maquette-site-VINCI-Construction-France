@@ -1,1 +1,39 @@
-/*# sourceMappingURL=index.css.map */
+@font-face {
+  font-family: "mont regular";
+  src: url(../../font/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "mont extraBold";
+  src: url(../../font/Montserrat-ExtraBold.ttf);
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header .nav .nav-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+header .nav a {
+  place-self: center;
+}
+header .nav a img {
+  height: 40px;
+  width: 200px;
+}
+header .nav .contain .upper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}/*# sourceMappingURL=index.css.map */

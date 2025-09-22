@@ -1,0 +1,22 @@
+header {
+  .nav {
+    .nav-container {
+      display: grid;
+      grid-template-columns: 40% 60%;
+    }
+
+    a {
+      place-self: center;
+      img {
+        height: 40px;
+        width: 200px;
+      }
+    }
+    .contain {
+      .upper {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}
