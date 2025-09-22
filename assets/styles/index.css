@@ -1,10 +1,10 @@
 @font-face {
   font-family: "mont regular";
-  src: url(../../font/Montserrat-Regular.ttf);
+  src: url(../font/Montserrat-Regular.ttf);
 }
 @font-face {
   font-family: "mont extraBold";
-  src: url(../../font/Montserrat-ExtraBold.ttf);
+  src: url(../font/Montserrat-ExtraBold.ttf);
 }
 a {
   text-decoration: none;
@@ -23,17 +23,158 @@ li {
 header .nav .nav-container {
   display: grid;
   grid-template-columns: 40% 60%;
+  max-width: 1250px;
+  margin: 15px auto 20px;
 }
 header .nav a {
-  place-self: center;
+  place-self: end start;
 }
 header .nav a img {
-  height: 40px;
-  width: 200px;
+  width: 180px;
+}
+header .nav .contain {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 30px;
+}
+header .nav .contain .p-contain {
+  background: rgb(24, 74, 139);
+  border-radius: 90px;
+  padding: 7px;
+  margin-left: 65%;
+}
+header .nav .contain .p-contain p {
+  color: rgb(255, 255, 255);
+  font-family: mont regular;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+header .nav .contain .p-contain p i {
+  color: rgb(178, 212, 252);
 }
 header .nav .contain .upper {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+header .nav .contain .upper li {
+  font-family: "mont extraBold";
+  font-weight: bold;
+  color: rgb(24, 74, 139);
+}
+header .nav .contain .upper li a,
+header .nav .contain .upper li a:visited {
+  color: rgb(24, 74, 139);
+}
+header .view {
+  height: 610px;
+  background: rgb(178, 212, 252);
+  margin-bottom: 30px;
+}
+header .view .view-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 30px;
+}
+header .view .view-container .view-left {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+header .view .view-container .view-left .view-left-container {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+header .view .view-container .view-left .view-left-container .view-left-left {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+header .view .view-container .view-left .view-left-container .view-left-left .span-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 10px;
+  border: 1px solid transparent;
+  background: rgb(224, 238, 254);
+  width: 20%;
+  margin: 0 auto;
+  border-radius: 50px;
+  padding: 20px;
+}
+header .view .view-container .view-left .view-left-container .view-left-left .span-container i {
+  font-size: 0.6rem;
+  place-self: center;
+  display: block;
+}
+header .view .view-container .view-left .view-left-container .view-left-right {
+  padding: 0 10px;
+}
+header .view .view-container .view-left .view-left-container .view-left-right h1 {
+  font-family: "mont extraBold";
+  letter-spacing: 1.2px;
+  font-size: 3.2rem;
+  color: rgb(46, 46, 46);
+}
+header .view .view-container .view-left .view-left-container .view-left-right .href {
+  margin-top: 20px;
+}
+header .view .view-container .view-left .view-left-container .view-left-right .href a {
+  border: 2px solid rgb(0, 0, 0);
+  padding: 15px;
+  border-radius: 80px;
+  text-transform: uppercase;
+  font-family: "mont extraBold";
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: rgb(0, 0, 0);
+}
+header .view .view-container .view-left .view-left-container .view-left-right .href a i {
+  transform: translateX(5px);
+  transition: 0.3s;
+}
+header .view .view-container .view-left .view-left-container .view-left-right .href a:hover i {
+  transform: translateX(10px);
+}
+header .view .view-container .view-right {
+  background: url(../image/image1.jpg) center/cover;
+  height: 400px;
+}
+
+.txt {
+  height: 100px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  align-items: center;
+}
+.txt .txt-container {
+  max-width: 1000px;
+  margin: 0px auto;
+}
+.txt .txt-container p {
+  font-family: mont regular;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 2;
+  place-items: center;
+  display: block;
+  letter-spacing: 1px;
+}
+.txt .txt-container p a {
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */
