@@ -1,5 +1,5 @@
 .txt {
-  height: 100px;
+  height: 250px;
   @include centerChild;
   align-items: center;
   .txt-container {
@@ -17,6 +17,8 @@
 
       a {
         text-decoration: underline;
+        font-family: $font2;
+        text-underline-offset: 1.5px;
       }
     }
   }
