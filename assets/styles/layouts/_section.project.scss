@@ -1,0 +1,67 @@
+.projet {
+  margin-top: 200px;
+  background: $blue5;
+  padding: 30px 0;
+
+  .projet-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 43% 57%;
+
+    .projet-left {
+      @include centerChild;
+      .projet-left-container {
+        padding: 90px 0px;
+        h3 {
+          font-family: $font2;
+          font-size: 2.5rem;
+          letter-spacing: 2px;
+        }
+        p {
+          font-family: $font1;
+          width: 75%;
+          line-height: 1.5;
+          padding: 20px 0;
+          font-weight: 500;
+        }
+        .href {
+          margin-top: 30px;
+
+          a {
+            border: 1px solid transparent;
+            padding: 18px;
+            border-radius: 80px;
+            background: $blue1;
+            text-transform: uppercase;
+            color: $white;
+            font-family: $font2;
+            font-size: 0.8rem;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s;
+
+            &:hover {
+              i {
+                transform: translate(9px);
+              }
+            }
+
+            i {
+              transform: translateX(7px);
+            }
+          }
+        }
+      }
+      .projet-right {
+        background: url(../image/build-better-together.jpg) center/cover;
+        width: 100%;
+      }
+    }
+    .projet-right {
+      background: url(../image/build-better-together.jpg) center/cover;
+    }
+  }
+}

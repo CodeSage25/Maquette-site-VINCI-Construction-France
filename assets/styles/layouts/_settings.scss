@@ -15,8 +15,10 @@ $blue1: rgba(24 74 139);
 $blue2: rgba(178 212 252);
 $blue3: rgba(0 68 137);
 $blue4: rgb(193 221 253);
+$blue5: rgb(241 250 253);
 $noir1: rgba(0 0 0);
 $noir2: rgba(46 46 46);
+$white2: rgba(212, 212, 212, 0.374);
 
 @mixin grid {
   display: grid;

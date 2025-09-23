@@ -317,8 +317,8 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
   place-self: start;
 }
 .about .about-container .about-item {
-  border-bottom: 1px solid rgb(0, 0, 0);
-  padding-bottom: 20px;
+  border-bottom: 3px solid rgba(212, 212, 212, 0.374);
+  padding-bottom: 30px;
   margin: 0 10px;
   position: relative;
 }
@@ -378,7 +378,7 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
   display: inline-block;
 }
 .about .about-container .about-item .news .date span.buble i {
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid transparent;
   border-radius: 45px;
   padding: 8px 16px;
   display: -ms-flexbox;
@@ -387,7 +387,7 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  background: rgb(46, 46, 46);
+  background: rgba(212, 212, 212, 0.374);
 }
 .about .href {
   margin-top: 120px;
@@ -411,4 +411,136 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
 }
 .about .href a i {
   transform: translateX(7px);
+}
+
+.projet {
+  margin-top: 200px;
+  background: rgb(241, 250, 253);
+  padding: 30px 0;
+}
+.projet .projet-container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 43% 57%;
+}
+.projet .projet-container .projet-left {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.projet .projet-container .projet-left .projet-left-container {
+  padding: 90px 0px;
+}
+.projet .projet-container .projet-left .projet-left-container h3 {
+  font-family: "mont extraBold";
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+.projet .projet-container .projet-left .projet-left-container p {
+  font-family: mont regular;
+  width: 75%;
+  line-height: 1.5;
+  padding: 20px 0;
+  font-weight: 500;
+}
+.projet .projet-container .projet-left .projet-left-container .href {
+  margin-top: 30px;
+}
+.projet .projet-container .projet-left .projet-left-container .href a {
+  border: 1px solid transparent;
+  padding: 18px;
+  border-radius: 80px;
+  background: rgb(24, 74, 139);
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-family: "mont extraBold";
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+.projet .projet-container .projet-left .projet-left-container .href a:hover i {
+  transform: translate(9px);
+}
+.projet .projet-container .projet-left .projet-left-container .href a i {
+  transform: translateX(7px);
+}
+.projet .projet-container .projet-left .projet-right {
+  background: url(../image/build-better-together.jpg) center/cover;
+  width: 100%;
+}
+.projet .projet-container .projet-right {
+  background: url(../image/build-better-together.jpg) center/cover;
+}
+
+footer {
+  background: rgb(24, 74, 139);
+}
+footer .site-footer {
+  padding: 40px 0;
+}
+footer .site-footer .site-footer-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  height: 300px;
+}
+footer .site-footer .site-footer-container::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: rgba(212, 212, 212, 0.374);
+  bottom: 0;
+}
+footer .site-footer .site-footer-container .div-container h4 {
+  color: rgb(255, 255, 255);
+  font-family: mont regular;
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+}
+footer .site-footer .site-footer-container .div-container ul li {
+  font-size: 0.9rem;
+}
+footer .site-footer .site-footer-container .div-container ul li a {
+  color: rgb(224, 238, 254);
+  font-family: mont regular;
+  padding: 5px;
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.3s;
+}
+footer .site-footer .site-footer-container .div-container ul li a:hover {
+  transform: scale(1.2);
+}
+footer .end {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+footer .end .end-left .end-left-container p {
+  font-family: "mont extraBold";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+footer .end .end-right .end-right-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+footer .end .end-right .end-right-container a {
+  font-family: mont regular;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
 }/*# sourceMappingURL=index.css.map */

@@ -14,8 +14,8 @@
       place-self: start;
     }
     .about-item {
-      border-bottom: 1px solid $noir1;
-      padding-bottom: 20px;
+      border-bottom: 3px solid $white2;
+      padding-bottom: 30px;
       margin: 0 10px;
       position: relative;
 
@@ -79,13 +79,13 @@
             display: inline-block;
 
             i {
-              border: 1px solid $noir1;
+              border: 1px solid transparent;
               border-radius: 45px;
               padding: 8px 16px;
               display: flex;
               justify-content: center;
               align-items: center;
-              background: $noir2;
+              background: $white2;
             }
           }
         }
