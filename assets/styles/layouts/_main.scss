@@ -22,7 +22,8 @@ main {
       font-size: 3rem;
       padding-bottom: 40px;
       @media screen and (max-width: 870px) {
-        text-align: center;
+        text-align: left;
+        font-size: 2.5rem;
       }
     }
 
@@ -58,9 +59,7 @@ main {
           @media screen and (max-width: 1070px) {
             height: 200px;
           }
-          @media screen and (max-width: 870px) {
-            margin: 10px 0;
-          }
+
           > :nth-child(1) {
             grid-area: enfant1;
           }
@@ -165,9 +164,6 @@ main {
           }
           @media screen and (max-width: 1070px) {
             height: 200px;
-          }
-          @media screen and (max-width: 870px) {
-            margin: 10px 0;
           }
 
           > :nth-child(1) {

@@ -1,5 +1,5 @@
 .about {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 90px auto;
 
   @media screen and (max-width: 1160px) {
@@ -25,17 +25,20 @@
     h2 {
       font-family: $font2;
       font-size: 3rem;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       place-self: start;
+      padding-left: 10px;
 
-      @media screen and (max-width: 870px) {
-        font-size: 2.2rem;
+      @media screen and (max-width: 890px) {
+        font-size: 2.4rem;
+        margin-bottom: 30px;
       }
     }
     .about-item {
       border-bottom: 3px solid $white2;
       padding-bottom: 30px;
-      margin: 0 10px;
+      padding: 5px 10px 30px 10px;
+
       position: relative;
       @media screen and (max-width: 870px) {
         padding-top: 20px;
@@ -73,14 +76,14 @@
           display: grid;
           grid-template-columns: 45% 55%;
           height: 180px;
-          @media screen and (max-width: 870px) {
-            grid-template-columns: 30% 70%;
+          @media screen and (max-width: 890px) {
+            display: flex;
+            padding-bottom: 20px;
+            align-items: center;
           }
 
           .img {
-            display: flex;
-            justify-content: center;
-
+            height: 100%;
             img {
               height: 35%;
               border-radius: 5px;
@@ -88,9 +91,9 @@
                 height: 30%;
               }
               @media screen and (max-width: 890px) {
-                height: 70%;
-                width: 80%; // prend toute la largeur de son conteneur
-                max-width: 50%;
+                display: block; // prend toute la largeur de son conteneur
+
+                height: 80%;
               }
             }
           }
@@ -109,11 +112,12 @@
               padding-left: 20px;
             }
             @media screen and (max-width: 890px) {
-              padding-left: 2px;
+              padding-left: 10px;
               overflow-wrap: break-word; // autorise la coupure dans les mots trop longs
               word-wrap: break-word; // rétro-compatibilité
               hyphens: auto; // ajoute un tiret si nécessaire
               white-space: normal;
+              place-self: start;
             }
           }
         }
@@ -149,6 +153,10 @@
   .href {
     margin-top: 210px;
     cursor: pointer;
+
+    @media screen and (max-width: 1030px) {
+      text-align: center;
+    }
 
     a {
       border: 1px solid transparent;

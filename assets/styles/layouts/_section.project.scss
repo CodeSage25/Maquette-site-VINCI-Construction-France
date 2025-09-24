@@ -4,20 +4,39 @@
   padding: 30px 0;
 
   .projet-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px 0;
     display: grid;
     grid-template-columns: 43% 57%;
 
+    @media screen and (max-width: 1150px) {
+      padding: 0 20px;
+    }
+    @media screen and (max-width: 1030px) {
+      display: block;
+    }
+
     .projet-left {
+      display: grid;
       @include centerChild;
       .projet-left-container {
-        padding: 90px 0px;
+        padding: 90px 20px;
+
+        @media screen and (max-width: 1030px) {
+          padding-top: 10px;
+        }
+        @media screen and (max-width: 710px) {
+          padding-bottom: 40px;
+        }
+
         h3 {
           font-family: $font2;
           font-size: 2.5rem;
           letter-spacing: 2px;
+          @media screen and (max-width: 600px) {
+            font-size: 2.3rem;
+          }
         }
         p {
           font-family: $font1;
@@ -25,9 +44,14 @@
           line-height: 1.5;
           padding: 20px 0;
           font-weight: 500;
+
+          @media screen and (max-width: 1030px) {
+            width: 90%;
+          }
         }
         .href {
           margin-top: 30px;
+          transition: 0.3s;
 
           a {
             border: 1px solid transparent;
@@ -40,8 +64,6 @@
             font-size: 0.8rem;
 
             letter-spacing: 1px;
-
-            transition: 0.3s;
 
             &:hover {
               i {
@@ -62,6 +84,15 @@
     }
     .projet-right {
       background: url(../image/build-better-together.jpg) center/cover;
+
+      @media screen and (max-width: 1030px) {
+        height: 400px;
+      }
+      @media screen and (max-width: 710px) {
+        width: 100%;
+        margin: 10px auto;
+        height: 350px;
+      }
     }
   }
 }

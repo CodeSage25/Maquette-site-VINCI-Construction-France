@@ -20,6 +20,10 @@ li {
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header .nav .nav-container {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -105,7 +109,7 @@ header .view .view-container {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: "texte image";
-  padding: 30px;
+  padding: 30px 20px 20px 20px;
 }
 @media screen and (max-width: 980px) {
   header .view .view-container {
@@ -116,13 +120,9 @@ header .view .view-container {
   }
 }
 header .view .view-container .view-left {
+  grid-area: texte;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  grid-area: texte;
 }
 header .view .view-container .view-left .view-left-container {
   display: grid;
@@ -143,6 +143,15 @@ header .view .view-container .view-left .view-left-container .view-left-left {
   -ms-flex-align: center;
       align-items: center;
 }
+@media screen and (max-width: 980px) {
+  header .view .view-container .view-left .view-left-container .view-left-left {
+    display: block;
+    -ms-flex-pack: initial;
+        justify-content: initial;
+    -ms-flex-align: initial;
+        align-items: initial;
+  }
+}
 header .view .view-container .view-left .view-left-container .view-left-left .span-container {
   display: -ms-flexbox;
   display: flex;
@@ -150,9 +159,8 @@ header .view .view-container .view-left .view-left-container .view-left-left .sp
       flex-direction: column;
   gap: 10px;
   border: 1px solid transparent;
-  background: rgb(224, 238, 254);
+  background: rgb(193, 221, 253);
   width: 20%;
-  margin: 0 auto;
   border-radius: 50px;
   padding: 20px;
 }
@@ -169,6 +177,12 @@ header .view .view-container .view-left .view-left-container .view-left-left .sp
         justify-content: center;
   }
 }
+@media (max-width: 600px) {
+  header .view .view-container .view-left .view-left-container .view-left-left .span-container {
+    width: 30%;
+    height: 10px;
+  }
+}
 header .view .view-container .view-left .view-left-container .view-left-left .span-container .texte {
   grid-area: a;
 }
@@ -183,7 +197,7 @@ header .view .view-container .view-left .view-left-container .view-left-right {
 }
 @media screen and (max-width: 980px) {
   header .view .view-container .view-left .view-left-container .view-left-right {
-    text-align: center;
+    text-align: left;
   }
 }
 header .view .view-container .view-left .view-left-container .view-left-right h1 {
@@ -199,7 +213,7 @@ header .view .view-container .view-left .view-left-container .view-left-right h1
 }
 @media screen and (max-width: 980px) {
   header .view .view-container .view-left .view-left-container .view-left-right h1 {
-    font-size: 2.7rem;
+    font-size: 2rem;
   }
 }
 header .view .view-container .view-left .view-left-container .view-left-right .href {
@@ -207,7 +221,7 @@ header .view .view-container .view-left .view-left-container .view-left-right .h
 }
 @media (max-width: 980px) {
   header .view .view-container .view-left .view-left-container .view-left-right .href {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 header .view .view-container .view-left .view-left-container .view-left-right .href a {
@@ -235,7 +249,8 @@ header .view .view-container .view-right {
 @media screen and (max-width: 980px) {
   header .view .view-container .view-right {
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
+    height: 300px;
   }
 }
 
@@ -265,6 +280,8 @@ header .view .view-container .view-right {
 @media screen and (max-width: 1070px) {
   .txt .txt-container p {
     padding: 0 20px;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 .txt .txt-container p a {
@@ -299,7 +316,8 @@ main .main-container h2 {
 }
 @media screen and (max-width: 870px) {
   main .main-container h2 {
-    text-align: center;
+    text-align: left;
+    font-size: 2.5rem;
   }
 }
 main .main-container .expertise .expertise-container {
@@ -336,11 +354,6 @@ main .main-container .expertise .expertise-container .expertise-left > div {
 @media screen and (max-width: 1070px) {
   main .main-container .expertise .expertise-container .expertise-left > div {
     height: 200px;
-  }
-}
-@media screen and (max-width: 870px) {
-  main .main-container .expertise .expertise-container .expertise-left > div {
-    margin: 10px 0;
   }
 }
 main .main-container .expertise .expertise-container .expertise-left > div > :nth-child(1) {
@@ -464,11 +477,6 @@ main .main-container .expertise .expertise-container .expertise-right > div {
     height: 200px;
   }
 }
-@media screen and (max-width: 870px) {
-  main .main-container .expertise .expertise-container .expertise-right > div {
-    margin: 10px 0;
-  }
-}
 main .main-container .expertise .expertise-container .expertise-right > div > :nth-child(1) {
   grid-area: enfant1;
 }
@@ -567,7 +575,7 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
 }
 
 .about {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 90px auto;
 }
 @media screen and (max-width: 1160px) {
@@ -598,18 +606,20 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
 .about .about-container h2 {
   font-family: "mont extraBold";
   font-size: 3rem;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   place-self: start;
+  padding-left: 10px;
 }
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 890px) {
   .about .about-container h2 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
   }
 }
 .about .about-container .about-item {
   border-bottom: 3px solid rgba(212, 212, 212, 0.374);
   padding-bottom: 30px;
-  margin: 0 10px;
+  padding: 5px 10px 30px 10px;
   position: relative;
 }
 @media screen and (max-width: 870px) {
@@ -645,16 +655,17 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
   grid-template-columns: 45% 55%;
   height: 180px;
 }
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 890px) {
   .about .about-container .about-item .news .news-container {
-    grid-template-columns: 30% 70%;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 20px;
+    -ms-flex-align: center;
+        align-items: center;
   }
 }
 .about .about-container .about-item .news .news-container .img {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  height: 100%;
 }
 .about .about-container .about-item .news .news-container .img img {
   height: 35%;
@@ -667,9 +678,8 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
 }
 @media screen and (max-width: 890px) {
   .about .about-container .about-item .news .news-container .img img {
-    height: 70%;
-    width: 80%;
-    max-width: 50%;
+    display: block;
+    height: 80%;
   }
 }
 .about .about-container .about-item .news .news-container p {
@@ -695,13 +705,14 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
 }
 @media screen and (max-width: 890px) {
   .about .about-container .about-item .news .news-container p {
-    padding-left: 2px;
+    padding-left: 10px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     -webkit-hyphens: auto;
         -ms-hyphens: auto;
             hyphens: auto;
     white-space: normal;
+    place-self: start;
   }
 }
 .about .about-container .about-item .news .date span.num {
@@ -735,6 +746,11 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
   margin-top: 210px;
   cursor: pointer;
 }
+@media screen and (max-width: 1030px) {
+  .about .href {
+    text-align: center;
+  }
+}
 .about .href a {
   border: 1px solid transparent;
   padding: 18px;
@@ -760,13 +776,24 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
   padding: 30px 0;
 }
 .projet .projet-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 20px auto;
   padding: 20px 0;
   display: grid;
   grid-template-columns: 43% 57%;
 }
+@media screen and (max-width: 1150px) {
+  .projet .projet-container {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .projet .projet-container {
+    display: block;
+  }
+}
 .projet .projet-container .projet-left {
+  display: grid;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -775,12 +802,27 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
       align-items: center;
 }
 .projet .projet-container .projet-left .projet-left-container {
-  padding: 90px 0px;
+  padding: 90px 20px;
+}
+@media screen and (max-width: 1030px) {
+  .projet .projet-container .projet-left .projet-left-container {
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 710px) {
+  .projet .projet-container .projet-left .projet-left-container {
+    padding-bottom: 40px;
+  }
 }
 .projet .projet-container .projet-left .projet-left-container h3 {
   font-family: "mont extraBold";
   font-size: 2.5rem;
   letter-spacing: 2px;
+}
+@media screen and (max-width: 600px) {
+  .projet .projet-container .projet-left .projet-left-container h3 {
+    font-size: 2.3rem;
+  }
 }
 .projet .projet-container .projet-left .projet-left-container p {
   font-family: mont regular;
@@ -789,8 +831,14 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
   padding: 20px 0;
   font-weight: 500;
 }
+@media screen and (max-width: 1030px) {
+  .projet .projet-container .projet-left .projet-left-container p {
+    width: 90%;
+  }
+}
 .projet .projet-container .projet-left .projet-left-container .href {
   margin-top: 30px;
+  transition: 0.3s;
 }
 .projet .projet-container .projet-left .projet-left-container .href a {
   border: 1px solid transparent;
@@ -802,7 +850,6 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
   font-family: "mont extraBold";
   font-size: 0.8rem;
   letter-spacing: 1px;
-  transition: 0.3s;
 }
 .projet .projet-container .projet-left .projet-left-container .href a:hover i {
   transform: translate(9px);
@@ -817,6 +864,18 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
 .projet .projet-container .projet-right {
   background: url(../image/build-better-together.jpg) center/cover;
 }
+@media screen and (max-width: 1030px) {
+  .projet .projet-container .projet-right {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 710px) {
+  .projet .projet-container .projet-right {
+    width: 100%;
+    margin: 10px auto;
+    height: 350px;
+  }
+}
 
 footer {
   background: rgb(24, 74, 139);
@@ -830,7 +889,13 @@ footer .site-footer .site-footer-container {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: relative;
-  height: 300px;
+}
+@media screen and (max-width: 650px) {
+  footer .site-footer .site-footer-container {
+    display: block;
+    height: 730px;
+    padding: 0 20px 0;
+  }
 }
 footer .site-footer .site-footer-container::after {
   position: absolute;
@@ -846,6 +911,12 @@ footer .site-footer .site-footer-container .div-container h4 {
   font-size: 1.2rem;
   padding-bottom: 20px;
 }
+@media screen and (max-width: 650px) {
+  footer .site-footer .site-footer-container .div-container h4 {
+    padding-top: 30px;
+    padding-bottom: 5px;
+  }
+}
 footer .site-footer .site-footer-container .div-container ul li {
   font-size: 0.9rem;
 }
@@ -860,17 +931,59 @@ footer .site-footer .site-footer-container .div-container ul li a {
 footer .site-footer .site-footer-container .div-container ul li a:hover {
   transform: scale(1.2);
 }
+@media screen and (max-width: 650px) {
+  footer .site-footer .site-footer-container .div-container ul li ul li a::hover {
+    transform: scale(1);
+  }
+}
 footer .end {
   display: grid;
   grid-template-columns: 50% 50%;
   max-width: 1250px;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 1066px) {
+  footer .end {
+    padding: 0 15px 10px 15px;
+  }
+}
+@media screen and (max-width: 690px) {
+  footer .end {
+    display: block;
+    gap: 10px;
+    -ms-flex-align: center;
+        align-items: center;
+    margin: 0 auto;
+  }
+}
+footer .end .end-left {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 footer .end .end-left .end-left-container p {
   font-family: "mont extraBold";
   color: rgb(255, 255, 255);
   font-weight: bold;
+}
+@media screen and (max-width: 1280px) {
+  footer .end .end-left .end-left-container p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 443px) {
+  footer .end .end-left .end-left-container p {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 690px) {
+  footer .end .end-right {
+    margin-top: 15px;
+  }
 }
 footer .end .end-right .end-right-container {
   display: -ms-flexbox;
@@ -880,8 +993,26 @@ footer .end .end-right .end-right-container {
   -ms-flex-align: center;
       align-items: center;
 }
-footer .end .end-right .end-right-container a {
+@media screen and (max-width: 690px) {
+  footer .end .end-right .end-right-container {
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1066px) {
+  footer .end .end-right .end-right-container li {
+    padding: 0 5px;
+  }
+}
+footer .end .end-right .end-right-container li a {
   font-family: mont regular;
   color: rgb(255, 255, 255);
   font-size: 0.9rem;
+}
+@media screen and (max-width: 1280px) {
+  footer .end .end-right .end-right-container li a {
+    font-size: 0.8rem;
+    padding: 1px;
+  }
 }/*# sourceMappingURL=index.css.map */
