@@ -12,12 +12,28 @@ header {
 
       img {
         width: 180px;
+
+        @media screen and (max-width: 1290px) {
+          margin-left: 15px;
+          width: 165px;
+        }
+        @media screen and (max-width: 1140px) {
+          width: 170px;
+        }
       }
     }
     .contain {
       display: flex;
       flex-direction: column;
       gap: 30px;
+
+      @media screen and (max-width: 1277px) {
+        margin-right: 20px;
+      }
+
+      @media screen and (max-width: 1140px) {
+        display: none;
+      }
 
       .p-contain {
         background: $blue1;
@@ -32,6 +48,12 @@ header {
           font-size: 0.8rem;
 
           font-weight: 600;
+
+          @media screen and (max-width: 1277px) {
+            font-size: 0.7rem;
+
+            padding: 2px 0;
+          }
 
           i {
             color: $blue2;
@@ -56,23 +78,41 @@ header {
     }
   }
   .view {
-    height: 610px;
     background: $blue2;
     margin-bottom: 30px;
 
     .view-container {
       @include grid;
+      grid-template-areas: "texte image";
       padding: 30px;
+
+      @media screen and (max-width: 980px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "image"
+          "texte";
+        gap: 40px;
+        padding-bottom: 30px;
+      }
 
       .view-left {
         @include centerChild;
+        grid-area: texte;
 
         .view-left-container {
           display: grid;
           grid-template-columns: 15% 85%;
+          grid-template-areas: "a b";
+          @media (max-width: 980px) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+              "b"
+              "a"; // l’image passe au-dessus
+          }
 
           .view-left-left {
             @include centerChild;
+
             .span-container {
               display: flex;
               flex-direction: column;
@@ -83,6 +123,17 @@ header {
               margin: 0 auto;
               border-radius: 50px;
               padding: 20px;
+
+              @media (max-width: 980px) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 50px;
+                justify-content: center;
+              }
+              .texte {
+                grid-area: a;
+              }
               i {
                 font-size: 0.6rem;
                 place-self: center;
@@ -93,14 +144,32 @@ header {
           }
           .view-left-right {
             padding: 0 10px;
+            grid-area: b;
+
+            @media screen and (max-width: 980px) {
+              text-align: center;
+            }
+            .texte {
+            }
             h1 {
               font-family: $font2;
               letter-spacing: 1.2px;
               font-size: 3.2rem;
               color: $noir2;
+
+              @media screen and (max-width: 1140px) {
+                font-size: 3rem;
+              }
+              @media screen and (max-width: 980px) {
+                font-size: 2.7rem;
+              }
             }
             .href {
               margin-top: 20px;
+
+              @media (max-width: 980px) {
+                margin-top: 40px;
+              }
               a {
                 border: 2px solid $noir1;
                 padding: 15px;
@@ -128,6 +197,12 @@ header {
       .view-right {
         background: url(../image/image1.jpg) center/cover;
         height: 400px;
+        grid-area: image;
+
+        @media screen and (max-width: 980px) {
+          width: 100%;
+          margin: 0 auto;
+        }
       }
     }
   }
