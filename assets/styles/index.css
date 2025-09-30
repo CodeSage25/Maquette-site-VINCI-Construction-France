@@ -192,7 +192,6 @@ header .view .view-container .view-left .view-left-container .view-left-left .sp
   display: block;
 }
 header .view .view-container .view-left .view-left-container .view-left-right {
-  padding: 0 10px;
   grid-area: b;
 }
 @media screen and (max-width: 980px) {
@@ -242,7 +241,7 @@ header .view .view-container .view-left .view-left-container .view-left-right .h
   transform: translateX(10px);
 }
 header .view .view-container .view-right {
-  background: url(../image/image1.jpg) center/cover;
+  background: url(../image/image1.webp) center/cover;
   height: 400px;
   grid-area: image;
 }
@@ -282,6 +281,16 @@ header .view .view-container .view-right {
     padding: 0 20px;
     width: 80%;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 520px) {
+  .txt .txt-container p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 469px) {
+  .txt .txt-container p {
+    padding-bottom: 30px;
   }
 }
 .txt .txt-container p a {
@@ -324,7 +333,6 @@ main .main-container .expertise .expertise-container {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 20px;
-  margin-right: 10px;
 }
 @media screen and (max-width: 870px) {
   main .main-container .expertise .expertise-container {
@@ -341,7 +349,6 @@ main .main-container .expertise .expertise-container .expertise-left > div {
   border-radius: 5px;
   -ms-flex-align: center;
       align-items: center;
-  height: 150px;
   position: relative;
 }
 @media (max-width: 1066px) {
@@ -349,11 +356,6 @@ main .main-container .expertise .expertise-container .expertise-left > div {
     grid-template-columns: 30% 70%;
     grid-template-rows: auto auto;
     grid-template-areas: "enfant1 enfant2" ". enfant3";
-  }
-}
-@media screen and (max-width: 1070px) {
-  main .main-container .expertise .expertise-container .expertise-left > div {
-    height: 200px;
   }
 }
 main .main-container .expertise .expertise-container .expertise-left > div > :nth-child(1) {
@@ -372,18 +374,19 @@ main .main-container .expertise .expertise-container .expertise-left > div .imag
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  display: grid;
 }
 main .main-container .expertise .expertise-container .expertise-left > div .image img {
-  width: 80%;
-  height: auto;
-  max-width: 100%;
+  display: block;
   border-radius: 5px;
-}
-@media screen and (max-width: 870px) {
-  main .main-container .expertise .expertise-container .expertise-left > div .image {
-    width: 80%;
-    margin: 0 auto;
-  }
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* ou contain selon le rendu voulu */
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  place-self: center;
 }
 main .main-container .expertise .expertise-container .expertise-left > div .text {
   place-self: center;
@@ -391,6 +394,7 @@ main .main-container .expertise .expertise-container .expertise-left > div .text
   font-weight: bold;
   font-size: clamp(12px, 1.8vw, 18px);
   overflow-wrap: break-word;
+  padding-left: 15px;
 }
 @media screen and (max-width: 1070px) {
   main .main-container .expertise .expertise-container .expertise-left > div .text {
@@ -413,6 +417,11 @@ main .main-container .expertise .expertise-container .expertise-left > div .text
     font-size: 1.2rem;
   }
 }
+@media screen and (max-width: 500px) {
+  main .main-container .expertise .expertise-container .expertise-left > div .text h5 {
+    font-size: 1rem;
+  }
+}
 main .main-container .expertise .expertise-container .expertise-left > div .text p {
   font-size: clamp(11px, 1.2vw, 14px);
   line-height: 1.8;
@@ -431,28 +440,33 @@ main .main-container .expertise .expertise-container .expertise-left > div .text
     font-size: 0.8rem;
   }
 }
-main .main-container .expertise .expertise-container .expertise-left > div .bubble {
+@media screen and (max-width: 500px) {
+  main .main-container .expertise .expertise-container .expertise-left > div .text p {
+    font-size: 0.7rem;
+  }
+}
+main .main-container .expertise .expertise-container .bubble {
   place-self: center;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 80px;
   padding: 8px;
 }
 @media screen and (max-width: 1066px) {
-  main .main-container .expertise .expertise-container .expertise-left > div .bubble {
+  main .main-container .expertise .expertise-container .bubble {
     place-self: end;
   }
 }
 @media screen and (max-width: 870px) {
-  main .main-container .expertise .expertise-container .expertise-left > div .bubble {
+  main .main-container .expertise .expertise-container .bubble {
     bottom: -10px;
     position: absolute;
   }
 }
-main .main-container .expertise .expertise-container .expertise-left > div .bubble i {
+main .main-container .expertise .expertise-container .bubble i {
   transform: rotate(53deg);
   font-size: 0.7em;
 }
-main .main-container .expertise .expertise-container .expertise-right > div {
+main .main-container .expertise .expertise-right > div {
   display: grid;
   grid-template-columns: 25% 65% 10%;
   grid-template-areas: "enfant1 enfant2 enfant3";
@@ -462,79 +476,76 @@ main .main-container .expertise .expertise-container .expertise-right > div {
   border-radius: 5px;
   -ms-flex-align: center;
       align-items: center;
-  height: 150px;
 }
 @media (max-width: 1066px) {
-  main .main-container .expertise .expertise-container .expertise-right > div {
+  main .main-container .expertise .expertise-right > div {
     grid-template-columns: 30% 70%;
     grid-template-rows: auto auto;
     grid-template-areas: "enfant1 enfant2" ". enfant3";
     position: relative;
   }
 }
-@media screen and (max-width: 1070px) {
-  main .main-container .expertise .expertise-container .expertise-right > div {
-    height: 200px;
-  }
-}
-main .main-container .expertise .expertise-container .expertise-right > div > :nth-child(1) {
+main .main-container .expertise .expertise-right > div > :nth-child(1) {
   grid-area: enfant1;
 }
-main .main-container .expertise .expertise-container .expertise-right > div > :nth-child(2) {
+main .main-container .expertise .expertise-right > div > :nth-child(2) {
   grid-area: enfant2;
 }
-main .main-container .expertise .expertise-container .expertise-right > div > :nth-child(3) {
+main .main-container .expertise .expertise-right > div > :nth-child(3) {
   grid-area: enfant3;
 }
-main .main-container .expertise .expertise-container .expertise-right > div .image {
+main .main-container .expertise .expertise-right > div .image {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  display: grid;
 }
-@media screen and (max-width: 870px) {
-  main .main-container .expertise .expertise-container .expertise-right > div .image {
-    width: 80%;
-    margin: 0 auto;
-  }
+main .main-container .expertise .expertise-right > div .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* ou contain selon le rendu voulu */
+  display: block;
+  min-width: 50%;
 }
-main .main-container .expertise .expertise-container .expertise-right > div .image img {
-  width: 80%;
-  height: auto;
-  max-width: 100%;
-  border-radius: 5px;
-}
-main .main-container .expertise .expertise-container .expertise-right > div .text {
+main .main-container .expertise .expertise-right > div .text {
   place-self: center;
   font-family: mont regular;
   font-weight: bold;
   font-size: clamp(12px, 1.8vw, 18px);
+  padding-left: 15px;
   overflow-wrap: break-word;
 }
 @media screen and (max-width: 1070px) {
-  main .main-container .expertise .expertise-container .expertise-right > div .text {
+  main .main-container .expertise .expertise-right > div .text {
     place-self: start;
   }
 }
-main .main-container .expertise .expertise-container .expertise-right > div .text h5 {
+main .main-container .expertise .expertise-right > div .text h5 {
   font-size: 1.2rem;
   padding-bottom: 10px;
   font-family: "mont extraBold";
   font-size: clamp(14px, 2vw, 18px);
 }
 @media screen and (max-width: 1166px) {
-  main .main-container .expertise .expertise-container .expertise-right > div .text h5 {
+  main .main-container .expertise .expertise-right > div .text h5 {
     font-size: 1rem;
   }
 }
 @media screen and (max-width: 870px) {
-  main .main-container .expertise .expertise-container .expertise-right > div .text h5 {
+  main .main-container .expertise .expertise-right > div .text h5 {
     font-size: 1.2rem;
   }
 }
-main .main-container .expertise .expertise-container .expertise-right > div .text p {
+@media screen and (max-width: 500px) {
+  main .main-container .expertise .expertise-right > div .text h5 {
+    font-size: 1rem;
+  }
+}
+main .main-container .expertise .expertise-right > div .text p {
   font-size: clamp(11px, 1.2vw, 14px);
   line-height: 1.8;
   font-size: 0.7rem;
@@ -543,33 +554,38 @@ main .main-container .expertise .expertise-container .expertise-right > div .tex
   font-weight: bold;
 }
 @media screen and (max-width: 1190px) {
-  main .main-container .expertise .expertise-container .expertise-right > div .text p {
+  main .main-container .expertise .expertise-right > div .text p {
     font-size: 0.6rem;
   }
 }
 @media screen and (max-width: 870px) {
-  main .main-container .expertise .expertise-container .expertise-right > div .text p {
+  main .main-container .expertise .expertise-right > div .text p {
     font-size: 0.8rem;
   }
 }
-main .main-container .expertise .expertise-container .expertise-right > div .bubble {
+@media screen and (max-width: 500px) {
+  main .main-container .expertise .expertise-right > div .text p {
+    font-size: 0.7rem;
+  }
+}
+main .main-container .expertise .expertise-right > div .bubble {
   border: 1px solid rgb(0, 0, 0);
   border-radius: 80px;
   padding: 8px;
   place-self: center;
 }
 @media screen and (max-width: 1066px) {
-  main .main-container .expertise .expertise-container .expertise-right > div .bubble {
+  main .main-container .expertise .expertise-right > div .bubble {
     place-self: end;
   }
 }
 @media screen and (max-width: 870px) {
-  main .main-container .expertise .expertise-container .expertise-right > div .bubble {
+  main .main-container .expertise .expertise-right > div .bubble {
     bottom: -10px;
     position: absolute;
   }
 }
-main .main-container .expertise .expertise-container .expertise-right > div .bubble i {
+main .main-container .expertise .expertise-right > div .bubble i {
   transform: rotate(53deg);
   font-size: 0.7em;
 }
@@ -858,11 +874,11 @@ main .main-container .expertise .expertise-container .expertise-right > div .bub
   transform: translateX(7px);
 }
 .projet .projet-container .projet-left .projet-right {
-  background: url(../image/build-better-together.jpg) center/cover;
+  background: url(../image/build-better-together.webp) center/cover;
   width: 100%;
 }
 .projet .projet-container .projet-right {
-  background: url(../image/build-better-together.jpg) center/cover;
+  background: url(../image/build-better-together.webp) center/cover;
 }
 @media screen and (max-width: 1030px) {
   .projet .projet-container .projet-right {

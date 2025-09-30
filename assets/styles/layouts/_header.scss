@@ -152,7 +152,6 @@ header {
             }
           }
           .view-left-right {
-            padding: 0 10px;
             grid-area: b;
 
             @media screen and (max-width: 980px) {
@@ -204,7 +203,7 @@ header {
         }
       }
       .view-right {
-        background: url(../image/image1.jpg) center/cover;
+        background: url(../image/image1.webp) center/cover;
         height: 400px;
         grid-area: image;
 
