@@ -140,6 +140,10 @@ header {
                 width: 30%;
                 height: 10px;
               }
+              @media (max-width: 450px) {
+                width: 40%;
+                height: 10px;
+              }
               .texte {
                 grid-area: a;
               }
